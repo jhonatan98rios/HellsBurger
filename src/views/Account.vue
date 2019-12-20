@@ -1,15 +1,13 @@
 <template>
-  <div class="home">
-    <Carousel />
+  <div class="Account">
+    <h2> Account </h2>
   </div>
 </template>
 
 <script>
-import Carousel from './Carousel.vue'
 
 export default {
   components: {
-    Carousel
   },
 
   data(){
@@ -27,10 +25,4 @@ export default {
 <style scoped lang="scss">
 @import '../assets/css/style.css';
   
-.home{
-  background-color: #999;
-  color: #fff;
-  line-height: 5px;
-  height: 80vh;
-}
 </style>

@@ -79,7 +79,7 @@ export default {
       transition: all .5s;
       filter: drop-shadow(1px 1px 3px rgba(0,0,0,.5));
 
-      img{
+      /* img{
         transition: all .5s;
       }
     }
@@ -90,7 +90,7 @@ export default {
 
       img{
         transform: scale(1.5);
-      }
+      } */
     }
   }
 }
