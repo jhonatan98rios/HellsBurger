@@ -23,12 +23,12 @@ export default {
           },
           {
             img: "https://cdn2.iconfinder.com/data/icons/data-analytics-16/34/29-512.png",
-            url: "/top",
+            url: "/ranking",
             alt: "#"
           },
           {
             img: "https://img.pngio.com/profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png",
-            url: "/user",
+            url: "/account",
             alt: "#"
           },
           {

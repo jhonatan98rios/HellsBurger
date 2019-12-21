@@ -2,7 +2,7 @@
   <div id="app">
     <Splash/>
     <Header />
-    <router-view />
+      <router-view></router-view>
     <Footer/>
   </div>
 </template>
