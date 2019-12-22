@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <ul>
-      <li v-for="(option, i) in content.options" :key="i" v-html="option.text" class="" />
+      <li v-for="(option, i) in content.options" :key="i" v-html="option.text" class="" @click="selectOption" />
     </ul>
   </div>
 </template>
@@ -14,22 +14,29 @@ export default {
         options: [
           {
             text: "Lanches",
-            link: "#"
+            link: "#",
           },
           {
             text: "Acompanhamentos",
-            link: "#"
+            link: "#",
           },
           {
             text: "Bebidas",
-            link: "#"
+            link: "#",
           },
           {
             text: "Doces",
-            link: "#"
+            link: "#",
           }
         ]
       }
+    }
+  },
+
+  methods: {
+    selectOption: function(val){
+      let value = val.target.innerText
+      this.$emit('select-option', value)
     }
   }
     
@@ -41,7 +48,7 @@ export default {
 
 .navbar{
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: #fff;
   filter: drop-shadow(1px 1px 5px rgba(0,0,0,.3));
 
