@@ -64,7 +64,7 @@ const content = {
         {
         name: "Coca-Cola",
         price: "5",
-        image: "http://www.solarbr.com.br/app/webroot/img/uploads/categorias/refrigeran_101020171663983430.png",
+        image: "https://superprix.vteximg.com.br/arquivos/ids/178180-292-292/Refrigerante-Coca-Cola-350ml-Lata-Original.png",
         id: "010"
         
         },
@@ -77,7 +77,7 @@ const content = {
         {
         name: "Fanta",
         price: "10",
-        image: "https://www.stickpng.com/assets/images/580b57fbd9996e24bc43c10f.png",
+        image: "https://www.nyasha.co.za/wp-content/uploads/2017/07/Can-of-Fanta-Orange.png",
         id: "012"
         },
         {

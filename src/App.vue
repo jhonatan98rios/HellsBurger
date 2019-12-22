@@ -3,7 +3,7 @@
     <Splash/>
     <Header />
     <router-view @add-to-bag="addtoBag" ></router-view>
-    <BagView card />
+    <BagView :bagContent="bagContent" />
     <Footer/>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
 
   data(){
     return{
-      bag:{
+      bagContent:{
         price: null
       }
     }
@@ -33,6 +33,7 @@ export default {
   methods:{
     addtoBag: function(id){
       console.log(id)
+      this.bagContent.price += id
     }
   }
 }

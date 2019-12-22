@@ -8,7 +8,7 @@
         <div class="description-box">
           <h3 v-html="option.name" class="m-t-32" />
           <p v-html="option.price" class="money" />
-          <p v-html="content.add" class="add" @click="addtoBag" :value="option.id" />
+          <p v-html="content.add" class="add" @click="addtoBag" :value="option.price" />
         </div>
       </div>
     </flickity>
@@ -47,7 +47,7 @@ export default {
 
   methods:{
     addtoBag: function(val){
-      let id = val.target.attributes.value.value
+      let id = parseInt(val.target.attributes.value.value)
       this.$emit('add-to-bag', id)
     }
   }

@@ -1,7 +1,7 @@
 <template>
-  <div class="bagview">
+  <div class="bagview" v-if="bagContent.price">
     <router-link to="/bag" class="no-link">
-      <h3 class="price money" v-html="content.bag.price"/>
+      <h3 class="price money" v-html="bagContent.price"/>
     </router-link>
   </div>
 </template>
@@ -10,13 +10,13 @@
 export default {
   data(){
     return{
-      content: {
-        bag:{
-          price: '100'
-        }
-      }
+      content: { }
     }
-  }
+  },
+
+  props: [
+    'bagContent'
+  ]
     
 }
 </script>
