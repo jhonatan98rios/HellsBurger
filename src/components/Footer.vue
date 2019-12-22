@@ -2,7 +2,7 @@
   <div class="footer w-100 is-fixed p-t-8">
     <ul class="icon-list">
       <li v-for="(icon, i) in content.icons" :key="i" class="list-item" >
-        <router-link :to="icon.url">
+        <router-link :to="icon.url" class="no-link">
           <img :src="icon.img" alt="" width="45" class="invert-colors">
         </router-link>
       </li>
@@ -49,11 +49,6 @@ export default {
 @import '../assets/css/style.css';
   
 .footer{
-  border-width: 5px;
-  border-style: solid;
-  border-image: linear-gradient(270deg, #ca0000, #ff9400) 1 0%;
-  border-bottom: none;
-  border-left: none;
   background-color: #000;
   color: #fff;
   line-height: 5px;
@@ -70,9 +65,5 @@ export default {
   padding: 0;
   margin: 0;
   
-  /deep/a{
-    text-decoration: none;
-    color: #fff;
-  }
 }
 </style>

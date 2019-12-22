@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Navbar @select-option="selectOption" />
-    <Carousel :options="content.options" v-if="renderCarousel" />
+    <Carousel :options="content.options" v-if="renderCarousel" @add-to-bag="addtoBag" />
   </div>
 </template>
 
@@ -50,6 +50,10 @@ export default {
       this.$nextTick(() => {
         this.renderCarousel = true
       });
+    },
+
+    addtoBag: function(id){
+      this.$emit('add-to-bag', id)
     }
   }
 }
@@ -60,8 +64,7 @@ export default {
 @import '../assets/css/style.css';
   
 .home{
-  background-image: url("https://vistapointe.net/images/dark-textures-wallpaper-2.jpg");
-  background-size: cover;
+  background-image: linear-gradient(180deg, var(--pink), var(--orange));
   color: #fff;
   line-height: 5px;
   height: 90vh;

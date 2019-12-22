@@ -7,6 +7,8 @@
         </div>
         <div class="description-box">
           <h3 v-html="option.name" class="m-t-32" />
+          <p v-html="option.price" class="money" />
+          <p v-html="content.add" class="add" @click="addtoBag" :value="option.id" />
         </div>
       </div>
     </flickity>
@@ -25,7 +27,7 @@ export default {
   data(){
     return{
       content: {
-        
+        add: 'add to card'
       },
       flickityOptions: {
         draggable: true,
@@ -41,25 +43,32 @@ export default {
 
   props: [
     'options'
-  ]
+  ],
+
+  methods:{
+    addtoBag: function(val){
+      let id = val.target.attributes.value.value
+      this.$emit('add-to-bag', id)
+    }
+  }
+  
     
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '../assets/css/style.css';
 .carousel{
   .flickity{
-    height: 70vh;
+    height: 60vh;
     width: 100%;
 
     .option{
       background-color: #fff;
-      border-radius: 20px;
+      border-radius: 40px;
       color: #000;
       width: 60vw;
-      height: 65vh;
+      height: 60vh;
       margin-top: 20px;
       margin-right: 20px;
       margin-bottom: 20px;
@@ -81,6 +90,20 @@ export default {
       .description-box{
         width: 100%;
         line-height: 25px;
+
+        .add{
+          width: 100px;
+          height: 30px;
+          background-image: linear-gradient(0deg, var(--pink), var(--orange));
+          margin: 0 auto;
+          color: #fff;
+          border-radius: 20px;
+          padding: 5px;
+
+          &:before{
+            content: '+ '
+          }
+        }
       }
     }
 

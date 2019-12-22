@@ -218,3 +218,17 @@
 .invert-colors{
     filter: invert(1);
 }
+
+.money::before{
+    content: "R$ ";
+}
+
+.no-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
