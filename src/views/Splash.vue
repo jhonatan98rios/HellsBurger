@@ -31,6 +31,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(180deg, #333, #111 );
+  z-index: 99; 
 }
 
 #loading-wrapper {

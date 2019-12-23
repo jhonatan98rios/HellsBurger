@@ -1,5 +1,5 @@
 <template>
-  <div class="footer w-100 is-fixed p-t-8">
+  <div class="footer w-100 is-fixed p-t-8" v-if="isLogged">
     <ul class="icon-list">
       <li v-for="(icon, i) in content.icons" :key="i" class="list-item" >
         <router-link :to="icon.url" class="no-link">
@@ -39,8 +39,10 @@ export default {
         ]
       }
     }
-  }
-    
+  },
+  props:[
+    'isLogged'
+  ]
 }
 </script>
 
