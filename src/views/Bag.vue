@@ -3,9 +3,12 @@
     <h2> Bag </h2>
 
     <ul v-if="bagContent != null" class="itens-list">
-      <li v-for="(item, index) in bagContent.products" :key="index" class="item-list" >
-          <p> Nome: {{item.name}} </p>
-          <p> Preço: {{item.price}} </p>
+      <li v-for="(item, index) in bagContent.products" :key="index" class="item-list row" >
+          <img :src="item.image" alt="" height="75">
+          <div class="description">
+            <p> Nome: {{item.name}} </p>
+            <p> Preço: R$ {{item.price}} </p>
+          </div>        
       </li>
     </ul>
   </div>
@@ -41,12 +44,25 @@ export default {
 
   .itens-list{
     list-style: none;
+    padding: 0;
+    margin: 0 auto;
 
     .item-list{
       font-size: 18px;
+      width: 85vw;
+      height: 80px;
+      filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
+      background-color: #fff;
+      padding-top: 10px;
+      line-height: 10px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      justify-content: space-around;
+      border-radius: 10px;
 
-      &:first-child{
-        //display: none;
+      .description{
+        width: 50%;
+        text-align: left;
       }
     }
   }
