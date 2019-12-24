@@ -8,7 +8,7 @@
         <div class="description-box">
           <h3 v-html="option.name" class="m-t-32" />
           <p v-html="option.price" class="money" />
-          <p v-html="content.add" class="add" @click="addtoBag" :value="option.price" />
+          <p v-html="content.add" class="add" @click="addtoBag" :value="option.id" />
         </div>
       </div>
     </flickity>

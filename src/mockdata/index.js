@@ -98,19 +98,19 @@ const content = {
         name: "Bolo de Limão (fatia)",
         price: "5",
         image: "http://bocadoforno.com.br/wp-content/uploads/torta-limao.png",
-        id: "014"
+        id: "015"
         },
         {
         name: "Bolo de Banana (fatia)",
         price: "10",
         image: "https://pngimage.net/wp-content/uploads/2018/05/bolo-de-banana-png-2.png",
-        id: "015"
+        id: "016"
         },
         {
         name: "Pote de Soorvete",
         price: "10",
         image: "https://www.deliveryextra.com.br/img/uploads/1/945/564945.png",
-        id: "016"
+        id: "017"
         },
     ]
 }
