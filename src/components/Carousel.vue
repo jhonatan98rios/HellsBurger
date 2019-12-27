@@ -68,6 +68,7 @@ export default {
       border-radius: 40px;
       color: #000;
       width: 60vw;
+      max-width: 400px;
       height: 60vh;
       margin-top: 20px;
       margin-right: 20px;

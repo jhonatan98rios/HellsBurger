@@ -64,12 +64,17 @@ export default {
 
   .form{
     width: 90%;
+    max-width: 768px;
     height: 60vh;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     border-radius: 10px;
+
+    @media(min-width: 768px){
+      height: 50vh;
+    }
 
     .title{
       color: #000;
@@ -79,7 +84,7 @@ export default {
     }
 
     input{
-      width: 70vw;
+      width: 70%;
       height: 40px;
       margin: 10px auto;
       border: none;
